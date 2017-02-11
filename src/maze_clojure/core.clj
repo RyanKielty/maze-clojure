@@ -72,6 +72,7 @@
 (defn -main []
   (let [rooms (create-rooms)
         rooms (assoc-in rooms [0 0 :start?] true)
+        rooms (assoc-in rooms [0 9 :end?] true)
         rooms (create-maze rooms 0 0)]
     ; print top walls
     (doseq [_ rooms]
